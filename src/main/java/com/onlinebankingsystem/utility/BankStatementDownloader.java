@@ -109,29 +109,29 @@ public class BankStatementDownloader {
 		fontN.setColor(Color.BLACK);
 		Chunk glueN = new Chunk(new VerticalPositionMark());
 		Paragraph pN = new Paragraph(
-				"Bank Name: " + transactions.get(0).getBank().getName(), fontN);
+				"Bank Name: " + transactions.getFirst().getBank().getName(), fontN);
 		pN.add(new Chunk(glueN));
-		pN.add("Account No.: " + transactions.get(0).getBankAccount().getNumber());
+		pN.add("Account No.: " + transactions.getFirst().getBankAccount().getNumber());
 		document.add(pN);
 
 		Font fontA = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
 		fontA.setSize(12);
 		fontA.setColor(Color.BLACK);
 		Chunk glueA = new Chunk(new VerticalPositionMark());
-		Paragraph pA = new Paragraph("Bank Code: " + transactions.get(0).getBank().getCode(),
+		Paragraph pA = new Paragraph("Bank Code: " + transactions.getFirst().getBank().getCode(),
 				fontA);
 		pA.add(new Chunk(glueA));
-		pA.add("Ifsc Code: " + transactions.get(0).getBankAccount().getIfscCode());
+		pA.add("Ifsc Code: " + transactions.getFirst().getBankAccount().getIfscCode());
 		document.add(pA);
 		
 		Font fontC = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
 		fontC.setSize(12);
 		fontC.setColor(Color.BLACK);
 		Chunk glueC = new Chunk(new VerticalPositionMark());
-		Paragraph pC = new Paragraph("Bank Email: " + transactions.get(0).getBank().getEmail(),
+		Paragraph pC = new Paragraph("Bank Email: " + transactions.getFirst().getBank().getEmail(),
 				fontC);
 		pC.add(new Chunk(glueC));
-		pC.add("Mobile No: " + transactions.get(0).getUser().getContact());
+		pC.add("Mobile No: " + transactions.getFirst().getUser().getContact());
 		document.add(pC);
 
 		

@@ -458,7 +458,7 @@ public class BankAccountTransactionResource {
 			return new ResponseEntity<BankTransactionResponseDto>(response, HttpStatus.BAD_REQUEST);
 		}
 
-		BankAccount account = accounts.get(0);
+		BankAccount account = accounts.getFirst();
 
 		List<BankAccountTransaction> bankAccountTransactions = new ArrayList<>();
 
@@ -511,7 +511,7 @@ public class BankAccountTransactionResource {
 			return new ResponseEntity<BankTransactionResponseDto>(response, HttpStatus.BAD_REQUEST);
 		}
 
-		BankAccount account = accounts.get(0);
+		BankAccount account = accounts.getFirst();
 
 		List<BankAccountTransaction> bankAccountTransactions = new ArrayList<>();
 
@@ -685,7 +685,7 @@ public class BankAccountTransactionResource {
 
 		response.setContentType("application/pdf");
 		String headerKey = "Content-Disposition";
-		String headerValue = "attachment; filename=" + bankAccountTransactions.get(0).getBankAccount().getNumber()
+		String headerValue = "attachment; filename=" + bankAccountTransactions.getFirst().getBankAccount().getNumber()
 				+ "_Statement.pdf";
 		response.setHeader(headerKey, headerValue);
 

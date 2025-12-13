@@ -1,5 +1,6 @@
 package com.onlinebankingsystem.config;
 
+import java.io.Serial;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -14,6 +15,7 @@ import com.onlinebankingsystem.entity.User;
 
 public class CustomUserDetails implements UserDetails {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
     private String email;

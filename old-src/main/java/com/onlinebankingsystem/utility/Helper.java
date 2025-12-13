@@ -1,5 +1,7 @@
 package com.onlinebankingsystem.utility;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Helper {
 	
 	public static String getAlphaNumericTransactionId()
@@ -15,7 +17,7 @@ public class Helper {
   
             int index
                 = (int)(AlphaNumericString.length()
-                        * Math.random());
+                        * ThreadLocalRandom.current().nextDouble());
   
             sb.append(AlphaNumericString
                           .charAt(index));
