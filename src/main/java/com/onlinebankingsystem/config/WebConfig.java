@@ -24,7 +24,10 @@ public class WebConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
+        // Allow production and local Docker dev origins
         config.addAllowedOrigin("https://bank.cloudwitches.online");
+        config.addAllowedOrigin("http://localhost:3000");
+        config.addAllowedOrigin("http://127.0.0.1:3000");
         config.setAllowedHeaders(Arrays.asList(
                 HttpHeaders.AUTHORIZATION,
                 HttpHeaders.CONTENT_TYPE,
