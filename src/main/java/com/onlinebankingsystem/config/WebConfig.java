@@ -25,7 +25,7 @@ public class WebConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
         // Allow production and local Docker dev origins
-        config.addAllowedOrigin("https://bank.cloudwitches.online");
+        config.addAllowedOrigin("https://pod4cloud.online");
         config.addAllowedOrigin("http://localhost:3000");
         config.addAllowedOrigin("http://127.0.0.1:3000");
         config.setAllowedHeaders(Arrays.asList(

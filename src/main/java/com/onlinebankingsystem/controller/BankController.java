@@ -19,7 +19,7 @@ import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("api/bank/")
-@CrossOrigin(origins = {"https://bank.cloudwitches.online", "http://localhost:3000", "http://127.0.0.1:3000"})
+@CrossOrigin(origins = {"https://pod4cloud.online", "http://localhost:3000", "http://127.0.0.1:3000"})
 public class BankController {
 
 	@Autowired
