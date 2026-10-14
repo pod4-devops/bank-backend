@@ -14,3 +14,4 @@ Befor starting the project set up, make sure you have properly installed the bel
 ### This is the architecture of the project
 
 ![App Preview](architecture-HIPPAA.drawio.svg)
+Use **PostgreSQL** database for production environment and MySQL database for development environment.

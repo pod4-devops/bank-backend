@@ -23,7 +23,7 @@ public class OnlineBankingSystemApplication implements WebMvcConfigurer {
 	private static final HashSet<String> TRUSTED_SOURCES = new HashSet<String>();
 
 	static {
-		TRUSTED_SOURCES.add("https://bank.cloudwitches.online");
+		TRUSTED_SOURCES.add("https://pod4cloud.online");
 	}
 
 	// method to add trusted sources via application context
@@ -56,7 +56,7 @@ public class OnlineBankingSystemApplication implements WebMvcConfigurer {
 		
 		registry.addMapping("/**")
 				// .allowedOrigins(TRUSTED_SOURCES.toArray(new String[TRUSTED_SOURCES.size()]))
-				.allowedOrigins("https://bank.cloudwitches.online").allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD")
+				.allowedOrigins("https://pod4cloud.online").allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD")
 				.allowedHeaders("origin", "content-type", "accept", "authorization", "user-agent", "host",
 						"X-Forwarded-For", "X-Forwarded-Proto", "X-Forwarded-Port", "X-Redirected-Path",
 						"X-Redirected-Params", "X-TraceId", "X-Feature-Flags", "X-Partner-Id")
